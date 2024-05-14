@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "K2D Bold";
+    src: url("../fonts/K2D/K2D-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Lato Medium";
+    src: url("../fonts/Lato/Lato-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Lato Bold";
+    src: url("../fonts/Lato/Lato-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Lato Extra Bold";
+    src: url("../fonts/Lato/Lato-ExtraBold.ttf") format("truetype");
+}

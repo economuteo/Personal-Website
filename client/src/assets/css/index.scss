@@ -1,0 +1,85 @@
+/* ============= GLOBAL CSS =============== */
+
+/* Fonts */
+@import "./fonts.css";
+
+html {
+    font-size: 100%;
+} /*16px*/
+
+:root {
+    /* colors */
+
+    /* basic colors */
+    --primary-50: #fff;
+    --primary-100: #fd6f00;
+    --primary-200: #000;
+    --foundation-dark-hover: #959595;
+    --foundation-dark-active: #707070;
+    --background-color: #121212;
+
+    /* linear gradients */
+    --gradient-1: linear-gradient(to right, #fa6e00 0%, #e60026 100%);
+    --gradient-2: linear-gradient(to bottom right, #fd6f00 0%, red 100%);
+    --gradient-3: linear-gradient(to right, #984300 0%, #fd6f00 46%, #ca5900 100%);
+
+    background-color: var(--background-color);
+
+    /* Animations */
+
+    @keyframes Gradient {
+        0% {
+            background-position: 0% 0;
+        }
+        50% {
+            background-position: 100% 0;
+        }
+        100% {
+            background-position: 0% 0;
+        }
+    }
+
+    body {
+        margin: 0px;
+    }
+
+    /* Responsiveness */
+
+    /* Media Queries */
+
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+        body {
+            margin-top: 33px;
+        }
+        .container {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+    }
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+        body {
+            margin-top: 57px;
+        }
+
+        .container {
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+    }
+}
+
+.logo {
+    font-family: "K2D Bold";
+    font-size: 30px;
+    /* Gradient */
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
