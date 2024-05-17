@@ -2,65 +2,74 @@
 /* Fonts */
 @import "./fonts.css";
 html {
-    font-size: 100%;
+  font-size: 100%;
 } /*16px*/
 :root {
-    /* colors */
-    /* basic colors */
-    --primary-50: #fff;
-    --primary-100: #fd6f00;
-    --primary-200: #000;
-    --foundation-dark-hover: #959595;
-    --background-color: #121212;
-    /* linear gradients */
-    --gradient-1: linear-gradient(to right, #fa6e00 0%, #e60026 100%);
-    --gradient-2: linear-gradient(to bottom right, #fd6f00 0%, red 100%);
-    --gradient-3: linear-gradient(to right, #984300 0%, #fd6f00 46%, #ca5900 100%);
-    background-color: var(--background-color);
-    /* Animations */
-    /* Responsiveness */
-    /* Media Queries */
-    /* Extra small devices (phones, 600px and down) */
-    /* Medium devices (landscape tablets, 768px and up) */
-    /* Extra large devices (large laptops and desktops, 1200px and up) */
+  /* colors */
+  /* basic colors */
+  --primary-50: #fff;
+  --foundation-orange-normal: #fd6f00;
+  --primary-200: #000;
+  --foundation-light: #fefefe;
+  --foundation-normal-active: #c6c6c6;
+  --foundation-normal-hover: #dfdfdf;
+  --foundation-dark-hover: #959595;
+  --foundation-dark-active: #707070;
+  --foundation-darker: #575757;
+  --background-color: #121212;
+  --special-color: rgba(255, 255, 255, 0.04);
+  --special-color2: rgba(255, 255, 255, 0.08);
+  /* linear gradients */
+  --gradient-1: linear-gradient(to right, #fa6e00 0%, #e60026 100%);
+  --gradient-2: linear-gradient(to bottom right, #fd6f00 0%, red 100%);
+  --gradient-3: linear-gradient(to right, #984300 0%, #fd6f00 46%, #ca5900 100%);
+  --gradient-4: linear-gradient(to bottom right, #fd6f00 0%, #e46400 100%);
+  background-color: var(--background-color);
+  /* Animations */
+  /* Responsiveness */
+  /* Media Queries */
+  /* Extra small devices (phones, 600px and down) */
+  /* Medium devices (landscape tablets, 768px and up) */
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
 }
 @keyframes Gradient {
-    0% {
-        background-position: 0% 0;
-    }
-    50% {
-        background-position: 100% 0;
-    }
-    100% {
-        background-position: 0% 0;
-    }
+  0% {
+    background-position: 0% 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0% 0;
+  }
 }
 :root body {
-    margin: 0px;
+  margin: 0px;
+}
+:root p {
+  margin: 0px;
 }
 @media only screen and (max-width: 600px) {
-    :root body {
-        margin-top: 33px;
-    }
-    :root .container {
-        padding-left: 24px;
-        padding-right: 24px;
-    }
+  :root body {
+    margin-top: 33px;
+  }
+  :root .container {
+    padding: 0px 24px;
+  }
 }
 @media only screen and (min-width: 768px) {
-    :root body {
-        margin-top: 57px;
-    }
-    :root .container {
-        padding-left: 80px;
-        padding-right: 80px;
-    }
+  :root body {
+    margin-top: 57px;
+  }
+  :root .container {
+    padding: 0px 80px;
+  }
 }
 .logo {
-    font-family: "K2D Bold";
-    font-size: 30px;
-    /* Gradient */
-    background: var(--gradient-1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-} /*# sourceMappingURL=index.css.map */
+  font-family: "K2D Bold";
+  font-size: 30px;
+  /* Gradient */
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}/*# sourceMappingURL=index.css.map */

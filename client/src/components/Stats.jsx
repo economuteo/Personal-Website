@@ -12,7 +12,7 @@ const Stats = () => {
             <div className="column">
                 <div>
                     <span className="special">2+</span>
-                    <p>Project done</p>
+                    <p>Projects done</p>
                 </div>
             </div>
             <div className="column">

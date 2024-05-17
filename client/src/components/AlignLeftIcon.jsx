@@ -1,6 +1,8 @@
+import Wrapper from "../assets/wrappers/AlignLeftIcon";
+
 const AlignLeftIcon = () => {
     return (
-        <span className="align-left-icon">
+        <Wrapper>
             <svg
                 width="24"
                 height="25"
@@ -29,7 +31,7 @@ const AlignLeftIcon = () => {
                     strokeLinejoin="round"
                 />
             </svg>
-        </span>
+        </Wrapper>
     );
 };
 

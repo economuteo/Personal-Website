@@ -1,9 +1,36 @@
-const Portofolio = () => {
-  return (
-    <div>
-        <h1>Portofolio</h1>
-    </div>
-  )
-}
+import { useState } from "react";
+import { Apps } from "../components";
+import Wrappper from "../assets/wrappers/Portofolio";
+import appsData from "../data/Apps";
 
-export default Portofolio
+const Portofolio = () => {
+    const [activeCategory, setActiveCategory] = useState("All");
+
+    const filteredApps =
+        activeCategory === "All"
+            ? appsData
+            : appsData.filter((app) => app.category === activeCategory);
+
+    return (
+        <Wrappper className="container">
+            <p className="special1">Portofolio</p>
+            <span className="buttons-container">
+                <span
+                    className={`special-button ${activeCategory === "All" ? "active" : ""}`}
+                    onClick={() => setActiveCategory("All")}>
+                    All
+                </span>
+                <span
+                    className={`special-button ${
+                        activeCategory === "Desktop apps" ? "active" : ""
+                    }`}
+                    onClick={() => setActiveCategory("Desktop apps")}>
+                    Desktop Apps
+                </span>
+            </span>
+            <Apps apps={filteredApps} />
+        </Wrappper>
+    );
+};
+
+export default Portofolio;

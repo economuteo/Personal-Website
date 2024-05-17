@@ -10,7 +10,6 @@ const Wrapper = styled.span`
     background-position: 0% 0;
     a {
         text-decoration: none;
-        font-family: "Lato Bold";
         color: white;
     }
 
@@ -19,19 +18,30 @@ const Wrapper = styled.span`
         scale: 1.05;
     }
 
+    /* Responsiveness */
+
+    /* Mobile */
     @media only screen and (max-width: 600px) {
-        width: 85px;
+        width: 93px;
         height: 33px;
         font-size: 14px;
+        a {
+            font-family: "Lato Medium";
+        }
     }
 
+    /* Tablet */
     @media only screen and (min-width: 768px) {
-        width: 141px;
-        height: 43px;
-        font-size: 20px;
     }
 
-    @media only screen and (min-width: 1200px) {
+    /* Desktop */
+    @media only screen and (min-width: 1260px) {
+        width: 157px;
+        height: 48px;
+        font-size: 20px;
+        a {
+            font-family: "Lato Bold";
+        }
     }
 `;
 

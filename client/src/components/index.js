@@ -1,6 +1,12 @@
 export { default as AlignLeftIcon } from "./AlignLeftIcon";
 export { default as Logo } from "./Logo";
+export { default as Logos } from "./Logos";
 export { default as Navbar } from "./Navbar";
+export { default as Footer } from "./Footer";
+export { default as NavContent } from "./NavContent";
 export { default as HireMe } from "./HireMe";
 export { default as DownloadCV } from "./DownloadCV";
+export { default as OtherContact } from "./OtherContact";
 export { default as Stats } from "./Stats";
+export { default as App } from "./App";
+export { default as Apps } from "./Apps";
