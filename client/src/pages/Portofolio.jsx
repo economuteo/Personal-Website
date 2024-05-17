@@ -22,9 +22,9 @@ const Portofolio = () => {
                 </span>
                 <span
                     className={`special-button ${
-                        activeCategory === "Desktop apps" ? "active" : ""
+                        activeCategory === "Desktop Apps" ? "active" : ""
                     }`}
-                    onClick={() => setActiveCategory("Desktop apps")}>
+                    onClick={() => setActiveCategory("Desktop Apps")}>
                     Desktop Apps
                 </span>
             </span>

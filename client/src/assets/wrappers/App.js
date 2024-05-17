@@ -5,17 +5,25 @@ const Wrapper = styled.div`
     overflow: hidden;
     background-color: var(--special-color2);
 
+    a {
+        text-decoration: none;
+    }
+
     img {
         object-fit: cover;
         filter: grayscale(100%);
-        transition: 0.5s ease;
         &:hover {
             filter: grayscale(0%);
         }
     }
 
     .app-description {
+        box-sizing: border-box;
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
     }
+
     .app-name {
         font-family: "Lato Bold";
         color: var(--foundation-normal-active);
@@ -28,12 +36,12 @@ const Wrapper = styled.div`
     /* Responsiveness */
     /* Mobile */
     @media only screen and (max-width: 600px) {
-        width: 284px;
-        height: 338px;
-
         img {
             width: 284px;
             height: 284px;
+        }
+
+        .app-description {
         }
 
         .app-name {
@@ -50,12 +58,12 @@ const Wrapper = styled.div`
 
     /* Desktop */
     @media only screen and (min-width: 1260px) {
-        width: 415px;
-        height: 473px;
-
         img {
             width: 415px;
             height: 415px;
+        }
+
+        .app-description {
         }
 
         .app-name {
