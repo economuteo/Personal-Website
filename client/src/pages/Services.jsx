@@ -87,7 +87,9 @@ const Services = () => {
                                 <div className="image-container">
                                     <img src={PeopleLogo} />
                                 </div>
-                                <p className="service-role">Custom website</p>
+                                <p className="service-role">
+                                    Custom <br /> Website
+                                </p>
                             </div>
                             <div className="card-back">
                                 <p className="service-description">

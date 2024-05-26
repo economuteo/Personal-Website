@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
-const Wrapper = styled.span`
+const Wrapper = styled.div`
+    height: 100%;
     .hamburger {
-        width: 24px;
-        height: 24px;
+        width: 100%;
+        height: 100%;
         position: relative;
         display: inline-flex;
         flex-direction: column;
@@ -15,40 +16,40 @@ const Wrapper = styled.span`
             transition: all 0.3s ease;
         }
 
-         &::before,
-         &::after {
-                height: 3px;
-                width: 100%;
-                position: absolute;
-                content: "";
-                transition: all 0.3s ease;
-                background-color: #333;
-            }
+        &::before,
+        &::after {
+            height: 3px;
+            width: 100%;
+            position: absolute;
+            content: "";
+            background-color: #333;
+            transition: all 0.3s ease;
+        }
 
-            &::before {
-                top: 0px;
-            }
+        &::before {
+            top: 0px;
+        }
 
-            &::after {
-                bottom: 0px;
-            }
+        &::after {
+            bottom: 1px;
+        }
 
         &.animate {
-                .the-line {
-                    transform: scale(0);
-                }
+            .the-line {
+                transform: scale(0);
+            }
 
-                ::before {
-                    top: calc(50% - 1.5px);
-                    transform: rotate(135deg);
-                }
+            ::before {
+                top: calc(50% - 1.5px);
+                transform: rotate(135deg);
+            }
 
-                ::after {
-                    bottom: calc(50% - 1.5px);
-                    transform: rotate(-135deg);
-                }
+            ::after {
+                bottom: calc(50% - 1.5px);
+                transform: rotate(-135deg);
             }
         }
+    }
 `;
 
 export default Wrapper;

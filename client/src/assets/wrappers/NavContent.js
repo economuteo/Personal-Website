@@ -14,11 +14,11 @@ const Wrapper = styled.span`
     }
 
     @media only screen and (min-width: 768px) {
-        gap:25px;
+        gap: 25px;
     }
-    
-    @media only screen and (min-width: 1280px) {
-        gap:60px;
+
+    @media only screen and (min-width: 1328px) {
+        gap: 60px;
     }
 `;
 

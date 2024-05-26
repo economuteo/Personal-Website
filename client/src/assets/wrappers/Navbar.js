@@ -5,6 +5,10 @@ const Wrapper = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    .align-icon {
+        width: 24px;
+        height: 24px;
+    }
     .logo {
         display: none;
     }

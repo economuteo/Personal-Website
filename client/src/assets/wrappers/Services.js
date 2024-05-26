@@ -23,6 +23,7 @@ const Wrapper = styled.section`
     }
     .services-introduction-description {
         font-family: "Lato Medium";
+        line-height: 160%;
         color: var(--foundation-dark-active);
     }
 
@@ -33,9 +34,10 @@ const Wrapper = styled.section`
         overflow: hidden;
     }
     .cardContainer {
-        position: absolute;
         width: 100%;
         height: 100%;
+        box-sizing: border-box;
+        position: absolute;
         transform-style: preserve-3d;
         transition: all 0.5s ease;
     }
@@ -65,18 +67,22 @@ const Wrapper = styled.section`
         .service-role {
             box-sizing: border-box;
             text-align: center;
+            font-size: 1rem;
+            line-height: 140%;
             font-family: "Lato Bold";
             color: var(--foundation-orange-normal);
         }
     }
     .card-back {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
         width: 100%;
         height: 100%;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 10px 10px;
+        /* align-items: center; */
+        /* justify-content: center; */
+        position: absolute;
         backface-visibility: hidden;
         transform: rotateY(180deg);
         background: var(--gradient-2);
@@ -131,8 +137,7 @@ const Wrapper = styled.section`
         }
 
         .services-grid {
-            column-gap: 16px;
-            row-gap: 24px;
+            gap: 15px;
         }
 
         .card {

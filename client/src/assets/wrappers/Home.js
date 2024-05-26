@@ -37,7 +37,7 @@ const Wrapper = styled.section`
 
     .special1 {
         margin-bottom: 10px;
-        font-family: "Lato SemiBold";
+        font-family: "Lato Semi Bold";
         font-size: 1rem;
         color: var(--foundation-dark-active);
     }
@@ -121,7 +121,7 @@ const Wrapper = styled.section`
         }
         .special2 {
             font-size: clamp(1.25rem, 5vw, 1.875rem);
-            font-family: "Lato SemiBold";
+            font-family: "Lato Semi Bold";
         }
         .special3 {
             flex-direction: row;
