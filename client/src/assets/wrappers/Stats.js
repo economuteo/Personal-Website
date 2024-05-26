@@ -1,84 +1,87 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
+    --gap-size: 16.5px;
+    width: 100%;
+    max-width: 500px;
     box-sizing: border-box;
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    border-radius: 10px;
+    padding: 8px;
+    border-radius: 20px;
+    display: inline-flex;
+    gap: var(--gap-size);
+    justify-content: space-between;
     background-color: rgba(255, 255, 255, 0.04);
 
     .column {
+        box-sizing: border-box;
+        padding: 10px;
+        border-radius: 20px;
+        position: relative;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 10px;
+        align-items: start;
+        font-family: "Lato Regular";
+        background: var(--special-color);
+        p {
+            font-size: 0.75rem;
+            color: var(--foundation-normal-hover);
+        }
     }
 
     .special {
-        box-sizing: border-box;
+        font-family: "Lato Bold";
         color: var(--foundation-orange-normal);
+        font-size: 1rem;
     }
+
     p {
+        font-size: 1rem;
+        font-family: "Lato Regular";
         color: var(--foundation-normal-hover);
     }
 
-    .column::after {
-        content: "";
-        display: block;
-        height: 100%;
-        border-right: 1.5px solid;
-        border-color: var(--foundation-dark-hover);
-    }
-    .column:last-child::after {
-        display: none;
+    @media only screen and (min-width: 548px) {
+        .special {
+            font-size: clamp(1rem, 3vw, 1.25rem);
+        }
+        p {
+            font-size: clamp(0.75rem, 2vw, 1rem);
+        }
     }
 
-    /* Responsiveness */
+    @media only screen and (min-width: 768px) {
+        .column {
+            padding: 20px;
+        }
+        .special {
+            font-size: 1.25rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+    }
 
-    /* Mobile */
-    @media only screen and (max-width: 600px) {
-        width: 383px;
-        height: 99px;
+    /* Tablets */
+    /* @media only screen and (min-width: 768px) {
+    } */
+
+    @media only screen and (min-width: 1328px) {
+        height: 125px;
+        max-width: 537px;
         padding: 16px;
 
         .special {
-            font-size: 20px;
-            font-family: "Lato Regular";
-        }
-        p {
-            margin-top: 12px;
-            font-size: 16px;
-            font-family: "Lato Regular";
-        }
-
-        .column::after {
-            margin-left: 16px;
-        }
-    }
-
-    /*Tablets*/
-    @media only screen and (min-width: 768px) {
-    }
-
-    /*Desktops*/
-    @media only screen and (min-width: 1260px) {
-        width: 537px;
-        height: 125px;
-        padding: 24px;
-
-        .special {
-            font-size: 24px;
+            font-size: 1.25rem;
             font-family: "Lato Extra Bold";
         }
-        p {
-            margin-top: 10px;
-            font-size: 20px;
-            font-family: "Lato Bold";
-        }
-
-        .column::after {
-            margin-left: 30px;
+        .column {
+            p {
+                font-size: 1rem;
+                font-family: "Lato Bold";
+            }
         }
     }
 `;
-
 export default Wrapper;

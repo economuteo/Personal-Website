@@ -1,21 +1,14 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-    /* Responsiveness */
-    /* Mobile */
-    @media only screen and (max-width: 600px) {
-        margin-top: 40px;
-        margin-bottom: 60px;
-    }
+    margin-top: 2.5rem;
+    margin-bottom: 3.75rem;
 
-    /* Tablet */
     @media only screen and (min-width: 768px) {
-    }
-
-    /* Desktop */
-    @media only screen and (min-width: 1260px) {
-        margin-top: 60px;
-        margin-bottom: 130px;
+        body {
+            margin-top: 3.75rem;
+            margin-bottom: 2.5rem;
+        }
     }
 `;
 

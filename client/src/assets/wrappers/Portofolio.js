@@ -1,22 +1,19 @@
 import styled from "styled-components";
 
 const Wrapper = styled.section`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
     .special1 {
         margin-bottom: 40px;
         text-align: center;
-        font-family: "Lato Regular";
+        font-family: "Lato Bold";
         color: var(--primary-50);
         font-size: 36px;
     }
 
     .buttons-container {
-        display: inline-flex;
+        display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        margin: auto;
     }
 
     .special-button {
@@ -31,7 +28,6 @@ const Wrapper = styled.section`
     }
 
     /* Responsiveness */
-    /* Mobile */
     @media only screen and (max-width: 600px) {
         .buttons-container {
             margin-bottom: 34px;
@@ -47,8 +43,7 @@ const Wrapper = styled.section`
     @media only screen and (min-width: 768px) {
     }
 
-    /* Desktop */
-    @media only screen and (min-width: 1260px) {
+    @media only screen and (min-width: 1328px) {
         .buttons-container {
             margin-bottom: 70px;
             gap: 24px;

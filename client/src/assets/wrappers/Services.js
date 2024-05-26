@@ -6,6 +6,8 @@ const Wrapper = styled.section`
 
     .services-grid {
         display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         justify-content: center;
     }
 
@@ -97,7 +99,6 @@ const Wrapper = styled.section`
 
     /* Responsiveness */
 
-    /* Mobile */
     @media only screen and (max-width: 600px) {
         gap: 24px;
 
@@ -130,13 +131,11 @@ const Wrapper = styled.section`
         }
 
         .services-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
+            column-gap: 16px;
+            row-gap: 24px;
         }
 
         .card {
-            width: 183px;
             height: 186px;
         }
         .card-back {
@@ -161,7 +160,7 @@ const Wrapper = styled.section`
     }
 
     /*Desktops*/
-    @media only screen and (min-width: 1260px) {
+    @media only screen and (min-width: 1328px) {
         gap: 80px;
 
         .introduction {
@@ -176,8 +175,6 @@ const Wrapper = styled.section`
         }
 
         .services-grid {
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
             gap: 40px;
         }
 
@@ -197,7 +194,6 @@ const Wrapper = styled.section`
         }
 
         .card {
-            width: 500px;
             height: 386px;
         }
         .card-back {

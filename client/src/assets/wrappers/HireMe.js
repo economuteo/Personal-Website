@@ -1,14 +1,19 @@
 import styled from "styled-components";
 
 const Wrapper = styled.span`
+    width: 85px;
+    height: 33px;
+    border-radius: 10px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
+    font-size: 0.875rem;
     background: var(--gradient-2);
     background-size: 200% 200%;
     background-position: 0% 0;
+
     a {
+        font-family: "Lato Bold";
         text-decoration: none;
         color: white;
     }
@@ -18,30 +23,15 @@ const Wrapper = styled.span`
         scale: 1.05;
     }
 
-    /* Responsiveness */
-
-    /* Mobile */
-    @media only screen and (max-width: 600px) {
-        width: 93px;
-        height: 33px;
-        font-size: 14px;
-        a {
-            font-family: "Lato Medium";
-        }
-    }
-
-    /* Tablet */
     @media only screen and (min-width: 768px) {
+        width: 100px;
+        height: 49px;
     }
 
-    /* Desktop */
-    @media only screen and (min-width: 1260px) {
+    @media only screen and (min-width: 1328px) {
         width: 157px;
         height: 48px;
-        font-size: 20px;
-        a {
-            font-family: "Lato Bold";
-        }
+        font-size: 1.25rem;
     }
 `;
 

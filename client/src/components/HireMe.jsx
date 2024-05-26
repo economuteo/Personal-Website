@@ -4,7 +4,7 @@ import Wrapper from "../assets/wrappers/HireMe";
 const HireMe = () => {
     return (
         <Wrapper className="hireButton">
-            <Link to="/hire">Hire me</Link>
+            <Link to="/contact">Hire me</Link>
         </Wrapper>
     );
 };

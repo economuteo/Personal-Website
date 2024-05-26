@@ -1,36 +1,37 @@
 import Wrapper from "../assets/wrappers/AlignLeftIcon";
+import Sidebar from "../components/Sidebar";
+import { useState } from "react";
 
 const AlignLeftIcon = () => {
+    const [sidebar, setSidebar] = useState(false);
+    const [sidebarAnimation, setSidebarAnimation] = useState(false);
+
+    const toggleSidebar = () => {
+        if (!sidebar) {
+            document.body.style.overflow = "hidden";
+            setSidebarAnimation(true);
+            setSidebar(true);
+        } else {
+            document.body.style.overflow = "";
+            setSidebarAnimation(false);
+            setTimeout(() => {
+                setSidebar(false);
+            }, 300);
+        }
+    };
+
     return (
-        <Wrapper>
-            <svg
-                width="24"
-                height="25"
-                viewBox="0 0 24 25"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M14 12.5H3"
-                    stroke="#959595"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                />
-                <path
-                    d="M21 6.5H3"
-                    stroke="#959595"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                />
-                <path
-                    d="M21 18.5H3"
-                    stroke="#959595"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                />
-            </svg>
+        <Wrapper onClick={toggleSidebar}>
+            <span className={`hamburger ${sidebarAnimation ? "animate" : ""} `}> 
+                <span className="the-line"></span>
+                {sidebar ? (
+                    <Sidebar
+                        sidebar={sidebar}
+                        sidebarAnimation={sidebarAnimation}
+                        toggleSidebar={toggleSidebar}
+                    />
+                ) : null}
+            </span>
         </Wrapper>
     );
 };

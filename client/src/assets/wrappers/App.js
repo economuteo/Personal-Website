@@ -12,9 +12,6 @@ const Wrapper = styled.div`
     img {
         object-fit: cover;
         filter: grayscale(100%);
-        &:hover {
-            filter: grayscale(0%);
-        }
     }
 
     .app-description {
@@ -34,7 +31,6 @@ const Wrapper = styled.div`
     }
 
     /* Responsiveness */
-    /* Mobile */
     @media only screen and (max-width: 600px) {
         img {
             width: 284px;
@@ -56,10 +52,9 @@ const Wrapper = styled.div`
     @media only screen and (min-width: 768px) {
     }
 
-    /* Desktop */
-    @media only screen and (min-width: 1260px) {
+    @media only screen and (min-width: 1328px) {
         img {
-            width: 415px;
+            width: 100%;
             height: 415px;
         }
 

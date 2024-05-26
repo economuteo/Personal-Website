@@ -1,9 +1,10 @@
 import Wrapper from "../assets/wrappers/DownloadCV";
+import Resume from "../assets/cv/Resume.pdf";
 
 const DownloadCV = () => {
     return (
         <Wrapper>
-            <a href="../assets/cv/cv.pdf" download>
+            <a href={Resume} download>
                 Download CV
             </a>
         </Wrapper>

@@ -1,21 +1,30 @@
 import styled from "styled-components";
 
 const Wrapper = styled.nav`
+    margin-top: 10px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-
-    /* Responsiveness */
-    /* Mobile */
-    @media only screen and (max-width: 600px) {
+    justify-content: space-between;
+    .logo {
+        display: none;
+    }
+    .nav-content {
+        display: none;
     }
 
-    /* Tablet */
     @media only screen and (min-width: 768px) {
+        .align-icon {
+            display: none;
+        }
+        .logo {
+            display: block;
+        }
+        .nav-content {
+            display: block;
+        }
     }
 
-    /* Desktop */
-    @media only screen and (min-width: 1260px) {
+    @media only screen and (min-width: 1280px) {
     }
 `;
 

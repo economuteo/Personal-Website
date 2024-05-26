@@ -18,48 +18,6 @@ const apps = [
         image: ecommercePlatformImage,
         link: "https://github.com/economuteo/Proshop-eCommerce_Platform-MERN",
     },
-    {
-        id: nanoid(),
-        appName: "Jobify",
-        category: "Desktop Apps",
-        image: jobifyImage,
-        link: "https://github.com/economuteo/Jobify-Job_Tracking_Platform-MERN",
-    },
-    {
-        id: nanoid(),
-        appName: "eCommerce Platform",
-        category: "Desktop Apps",
-        image: ecommercePlatformImage,
-        link: "https://github.com/economuteo/Proshop-eCommerce_Platform-MERN",
-    },
-    {
-        id: nanoid(),
-        appName: "Jobify",
-        category: "Desktop Apps",
-        image: jobifyImage,
-        link: "https://github.com/economuteo/Jobify-Job_Tracking_Platform-MERN",
-    },
-    {
-        id: nanoid(),
-        appName: "eCommerce Platform",
-        category: "Desktop Apps",
-        image: ecommercePlatformImage,
-        link: "https://github.com/economuteo/Proshop-eCommerce_Platform-MERN",
-    },
-    {
-        id: nanoid(),
-        appName: "Jobify",
-        category: "Desktop Apps",
-        image: jobifyImage,
-        link: "https://github.com/economuteo/Jobify-Job_Tracking_Platform-MERN",
-    },
-    {
-        id: nanoid(),
-        appName: "eCommerce Platform",
-        category: "Desktop Apps",
-        image: ecommercePlatformImage,
-        link: "https://github.com/economuteo/Proshop-eCommerce_Platform-MERN",
-    },
 ];
 
 export default apps;

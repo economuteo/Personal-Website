@@ -10,3 +10,4 @@ export { default as OtherContact } from "./OtherContact";
 export { default as Stats } from "./Stats";
 export { default as App } from "./App";
 export { default as Apps } from "./Apps";
+export { default as Sidebar } from "./Sidebar";

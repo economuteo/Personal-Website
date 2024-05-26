@@ -1,188 +1,226 @@
 import styled from "styled-components";
 
-const Wrapper = styled.div`
-    /* Constant values */
-    position: relative;
+const Wrapper = styled.section`
+    /* Responsiveness */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    .introduction-mobileScreens {
-        grid-area: introduction-mobileScreens;
-        display: inline;
+    .introduction {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: introduction;
     }
 
-    .splashImage {
-        position: absolute;
+    .splash-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 382px;
+        img {
+            max-width: 382px;
+            object-fit: cover;
+        }
+    }
+    .splash-container {
+        display: none;
+    }
+
+    .special0 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 24px;
     }
 
     .special1 {
+        margin-bottom: 10px;
         font-family: "Lato SemiBold";
+        font-size: 1rem;
         color: var(--foundation-dark-active);
     }
+
     .special2 {
         font-family: "Lato Bold";
+        font-size: 1.25rem;
         color: var(--foundation-dark-hover);
     }
+
     .special3 {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 3.125rem;
         font-family: "Lato Black";
         background: var(--gradient-3);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
-    .others-mobileScreens {
-        grid-area: others-mobileScreens;
+    .image-grid-child {
+        width: 100%;
+        max-width: 500px;
+        grid-area: imageGridChild;
+    }
+
+    .imageContainer {
+        position: relative;
+        height: 100vw;
+        margin: 40px 0px;
+        border-radius: 60px;
+        overflow: hidden;
+        img {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .others {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        grid-area: others;
     }
 
     .buttons {
         display: flex;
         align-items: center;
+        gap: 24px;
     }
 
-    .image-grid-child {
-        grid-area: imageGridChild;
-    }
-
-    .imageContainer {
-        overflow: hidden;
+    .splash-container {
+        position: absolute;
+        top: -5%;
+        left: 0%;
         img {
             width: 100%;
             height: 100%;
+            object-fit: cover;
         }
     }
 
-    /* Responsiveness */
-    /* Mobile */
-    @media only screen and (max-width: 600px) {
-        display: grid;
-        grid-template-rows: repeat(3, auto);
-        grid-template-areas:
-            "introduction-mobileScreens"
-            "imageGridChild"
-            "others-mobileScreens";
-        align-items: center;
-
-        .splashImage {
-            top: 0%;
-            left: 10%;
-            width: 382px;
-            height: 355px;
-            box-sizing: border-box;
-            position: absolute;
-            z-index: -1;
+    /* Split text on one row */
+    @media only screen and (min-width: 548px) {
+        --gap-size: 12px;
+        .special0 {
+            flex-direction: row;
+            gap: var(--gap-size);
         }
-
-        .introduction-mobileScreens {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
         .special1 {
-            margin-bottom: 10px;
-            font-size: 16px;
+            font-size: clamp(1.25rem, 5vw, 1.875rem);
+            margin-bottom: 0px;
         }
         .special2 {
-            margin-bottom: 24px;
-            font-size: 20px;
+            font-size: clamp(1.25rem, 5vw, 1.875rem);
+            font-family: "Lato SemiBold";
         }
         .special3 {
-            font-size: 50px;
+            flex-direction: row;
+            gap: var(--gap-size);
         }
-
-        .buttons {
-            gap: 24px;
+        .image-container {
+            height: 548px;
         }
+    }
 
-        .image-grid-child {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+    @media only screen and (min-width: 768px) {
+        .special1 {
+            font-size: 1.875rem;
+            margin-bottom: 0px;
         }
-
-        .others-mobileScreens {
-            display: flex;
-            flex-direction: column-reverse;
-            align-items: center;
-            gap: 25px;
+        .special2 {
+            font-size: 1.875rem;
         }
-
         .imageContainer {
-            width: 382px;
-            height: 327px;
-            border-radius: 60px;
-            margin-top: 30px;
-            margin-bottom: 30px;
-            position: relative;
-            img {
-                position: absolute;
-                width: 100%;
-                height: 327px;
-                object-position: center 100%;
-                object-fit: cover;
-            }
+            height: 500px;
+            width: 500px;
         }
     }
 
-    /* Tablet */
-    @media only screen and (min-width: 601px) {
-    }
-
-    /* Desktop */
-    @media only screen and (min-width: 1260px) {
+    @media only screen and (min-width: 1328px) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, auto);
         grid-template-areas:
             "introduction-mobileScreens imageGridChild"
-            "others-mobileScreens imageGridChild";
+            "others imageGridChild";
 
-        .splashImage {
-            width: 601px;
-            height: 517px;
-            top: 0%;
-            left: 0%;
-            z-index: -1;
-            position: absolute;
-            box-sizing: border-box;
+        .introduction {
+            align-items: start;
+            grid-area: introduction-mobileScreens;
         }
 
+        .special0 {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 10px;
+        }
         .special1 {
-            margin-bottom: 10px;
+            margin-bottom: 0px;
             font-size: 24px;
         }
         .special2 {
-            margin-bottom: 24px;
+            margin-bottom: 0px;
+            font-family: "Lato Bold";
             font-size: 28px;
         }
         .special3 {
             margin-bottom: 17px;
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
             font-size: 70px;
+            letter-spacing: 3%;
+            text-align: start;
         }
 
-        .buttons {
-            margin-bottom: 80px;
-            gap: 24px;
-        }
-
-        .logosExtraStyle {
-            margin-bottom: 61px;
+        .splashImage {
+            width: 601px;
+            height: 517px;
+            box-sizing: border-box;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            z-index: -1;
         }
 
         .image-grid-child {
+            max-width: 100%;
             display: flex;
             justify-content: end;
-            align-items: center;
+            grid-area: imageGridChild;
         }
 
         .imageContainer {
             width: 466px;
             height: 596px;
             border-radius: 30px;
-            overflow: hidden;
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-            }
+        }
+
+        .others {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: start;
+            gap: 0px;
+            grid-area: others;
+        }
+
+        .buttons {
+            margin-bottom: 80px;
+        }
+
+        .logosExtraStyle {
+            margin-bottom: 61px;
         }
     }
 `;

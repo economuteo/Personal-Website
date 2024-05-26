@@ -1,63 +1,77 @@
 import styled from "styled-components";
 
 const Wrapper = styled.footer`
+    --footer-gap: 30px;
+    padding-top: 40px;
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--footer-gap);
     background: var(--special-color);
 
+    .nav-content {
+        display: none;
+    }
+
     .footer-content {
-        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        ::after {
-            content: "";
-            height: 1px;
-            background: linear-gradient(to right, transparent, red, transparent);
-            margin-bottom: 20px;
-        }
-        .da {
-            margin: 0px;
-        }
-    }
-    .footer-quote {
-        text-align: center;
-        font-family: "Lato Medium";
-        color: var(--foundation-dark-hover);
-    }
+        gap: 24px;
 
-    /* Responsiveness */
-    /* Mobile */
-    @media only screen and (max-width: 600px) {
-        padding-top: 28px;
-        padding-bottom: 24px;
-        .footer-content {
+        .contact {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             gap: 20px;
-            ::after {
-                width: 90%;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            img {
+                width: 24px;
+                height: 24px;
+            }
+            a {
+                color: var(--foundation-dark-hover);
+                text-decoration: none;
             }
         }
-        .footer-quote {
-            font-size: 16px;
+    }
+
+    .footer-quote {
+        position: relative;
+        font-size: 16px;
+        font-family: "Lato Medium";
+        text-align: center;
+        color: var(--foundation-dark-hover);
+        ::after {
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            top: calc(var(--footer-gap) / -2);
+            left: 0%;
+            content: "";
+            background: linear-gradient(to right, transparent, red, transparent);
         }
     }
 
-    /* Tablet */
     @media only screen and (min-width: 768px) {
-    }
-
-    /* Desktops */
-    @media only screen and (min-width: 1260px) {
-        padding-top: 56px;
-        padding-bottom: 28px;
         .footer-content {
             gap: 40px;
-            ::after {
-                width: 35%;
+            .contact {
+                flex-direction: row;
             }
         }
-        .footer-quote {
-            margin: 20px 0px;
-            font-size: 20px;
+        .nav-content {
+            display: block;
         }
+    }
+
+    @media only screen and (min-width: 1280px) {
     }
 `;
 
