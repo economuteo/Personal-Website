@@ -44,7 +44,10 @@ const Services = () => {
                                 <div className="image-container">
                                     <img src={PeopleLogo} />
                                 </div>
-                                <p className="service-role">Full-Stack Developer</p>
+                                <p className="service-role">
+                                    <span>Full-Stack</span>
+                                    <span>Developer</span>
+                                </p>
                             </div>
                             <div className="card-back">
                                 <p className="service-description">
@@ -66,7 +69,10 @@ const Services = () => {
                                 <div className="image-container">
                                     <img src={PeopleLogo} />
                                 </div>
-                                <span className="service-role">Front-End Developer</span>
+                                <span className="service-role">
+                                    <span>Front-End</span>
+                                    <span>Developer</span>
+                                </span>
                             </div>
                             <div className="card-back">
                                 <p className="service-description">
@@ -88,7 +94,8 @@ const Services = () => {
                                     <img src={PeopleLogo} />
                                 </div>
                                 <p className="service-role">
-                                    Custom <br /> Website
+                                    <span>Custom</span>
+                                    <span>Website</span>
                                 </p>
                             </div>
                             <div className="card-back">
@@ -110,13 +117,16 @@ const Services = () => {
                                 <div className="image-container">
                                     <img src={PeopleLogo} />
                                 </div>
-                                <p className="service-role">Back-End Developer</p>
+                                <p className="service-role">
+                                    <span>Back-End</span>
+                                    <span>Developer</span>
+                                </p>
                             </div>
                             <div className="card-back">
                                 <p className="service-description">
                                     Crafting the backbone of your project with precision and
                                     reliability, ensuring seamless quality integration into your
-                                    existing plans or ongoing work
+                                    existing plans or ongoing work.
                                 </p>
                                 <Link to="/contact" className="service-description-contactOption">
                                     Contact me

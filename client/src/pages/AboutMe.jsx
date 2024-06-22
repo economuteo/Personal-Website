@@ -28,12 +28,6 @@ const AboutMe = () => {
                         technologies. I can adapt on any tech stack in a short time and I am always
                         eager to consistently deliver unmatched quality.
                     </p>
-                    <a href={Resume} download>
-                        <div className="special-download-button">
-                            <img src={DownloadLogo} />
-                            <span className="special-button">Download CV</span>
-                        </div>
-                    </a>
                 </div>
             </div>
             <div className="tech-stack">
@@ -62,6 +56,12 @@ const AboutMe = () => {
                     <span>NodeJs</span>
                 </div>
             </div>
+            <a href={Resume} download>
+                <div className="special-download-button">
+                    <img src={DownloadLogo} />
+                    <span className="special-button">Download CV</span>
+                </div>
+            </a>
         </Wrapper>
     );
 };

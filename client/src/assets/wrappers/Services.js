@@ -3,9 +3,10 @@ import styled from "styled-components";
 const Wrapper = styled.section`
     display: grid;
     justify-content: center;
-
+    gap: 24px;
     .services-grid {
         display: grid;
+        gap: 15px;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
         justify-content: center;
@@ -15,19 +16,24 @@ const Wrapper = styled.section`
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 14px;
     }
 
     .services-introduction-title {
+        font-size: 24px;
         font-family: "Lato Bold";
         color: var(--foundation-light);
     }
     .services-introduction-description {
+        font-size: 16px;
         font-family: "Lato Medium";
+        text-align: center;
         line-height: 160%;
         color: var(--foundation-dark-active);
     }
 
     .card {
+        height: 200px;
         position: relative;
         border-radius: 15px;
         background-color: var(--special-color);
@@ -59,109 +65,87 @@ const Wrapper = styled.section`
         align-items: center;
         justify-content: center;
         backface-visibility: hidden;
-        .image-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .service-role {
-            box-sizing: border-box;
-            text-align: center;
-            font-size: 1rem;
-            line-height: 140%;
-            font-family: "Lato Bold";
-            color: var(--foundation-orange-normal);
+    }
+
+    .image-container {
+        width: 34px;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 28px;
+            height: 27px;
+            object-fit: contain;
         }
     }
+
+    .service-role {
+        box-sizing: border-box;
+        margin-top: 8px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        line-height: 140%;
+        font-size: 1.25rem;
+        font-family: "Lato Bold";
+        color: var(--foundation-orange-normal);
+    }
+
     .card-back {
         width: 100%;
         height: 100%;
-        display: flex;
-        flex-direction: column;
         box-sizing: border-box;
-        padding: 10px 10px;
-        /* align-items: center; */
-        /* justify-content: center; */
+        padding: 6px 8px;
         position: absolute;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        justify-items: center;
         backface-visibility: hidden;
         transform: rotateY(180deg);
-        background: var(--gradient-2);
         font-family: "Lato Medium";
-        .service-description {
-            box-sizing: border-box;
-            overflow: hidden;
-            text-align: center;
-            color: white;
-        }
-        .service-description-contactOption {
-            border: 2px solid white;
-            border-radius: 10px;
-            text-decoration: none;
-            margin-left: 35px;
-            margin-right: 35px;
-            color: white;
-        }
+        background: var(--gradient-2);
+    }
+    .service-description {
+        box-sizing: border-box;
+        max-height: 100%;
+        font-size: 0.85rem;
+        align-self: center;
+        text-align: center;
+        color: white;
+    }
+    .service-description-contactOption {
+        box-sizing: border-box;
+        padding: 5px;
+        border: 2px solid white;
+        border-radius: 10px;
+        align-self: end;
+        font-size: 0.75rem;
+        text-decoration: none;
+        color: white;
     }
 
-    /* Responsiveness */
-
-    @media only screen and (max-width: 600px) {
-        gap: 24px;
-
-        .introduction {
-            gap: 14px;
-        }
-
+    /* Tablets */
+    @media only screen and (min-width: 768px) {
         .services-introduction-title {
-            font-size: 24px;
+            font-size: 2rem;
         }
         .services-introduction-description {
-            font-size: 16px;
-            text-align: center;
+            font-size: 1.25rem;
         }
-
-        .image-container {
-            width: 34px;
-            height: 34px;
-            img {
-                width: 28px;
-                height: 27px;
-                object-fit: contain;
-            }
-        }
-
-        .service-role {
-            padding: 0px 10px;
-            margin-top: 8px;
-            font-size: 20px;
-        }
-
-        .services-grid {
-            gap: 15px;
-        }
-
         .card {
-            height: 186px;
+            height: 240px;
         }
-        .card-back {
-            gap: 15px;
-            .service-description {
-                margin-left: 12px;
-                margin-right: 12px;
-                font-size: 14px;
-            }
-            .service-description-contactOption {
-                font-size: 10px;
-                padding-top: 5px;
-                padding-bottom: 5px;
-                padding-left: 12px;
-                padding-right: 12px;
-            }
-        }
-    }
 
-    /*Tablets*/
-    @media only screen and (min-width: 768px) {
+        .card-back {
+            padding: 15px;
+        }
+        .service-description {
+            font-size: 1.25rem;
+        }
+        .service-description-contactOption {
+            font-size: 1rem;
+        }
     }
 
     /*Desktops*/
@@ -173,10 +157,10 @@ const Wrapper = styled.section`
         }
 
         .services-introduction-title {
-            font-size: 40px;
+            font-size: 2.5rem;
         }
         .services-introduction-description {
-            font-size: 24px;
+            font-size: 1.5rem;
         }
 
         .services-grid {
@@ -187,19 +171,21 @@ const Wrapper = styled.section`
             width: 70px;
             height: 70px;
             img {
-                width: 58px;
-                height: 56px;
+                width: 60px;
+                height: 60px;
                 object-fit: contain;
             }
         }
         .service-role {
             padding: 0px 20px;
             margin-top: 16px;
-            font-size: 24px;
+            flex-direction: row;
+            gap: 8px;
+            font-size: 1.875rem;
         }
 
         .card {
-            height: 386px;
+            height: 380px;
         }
         .card-back {
             gap: 35px;

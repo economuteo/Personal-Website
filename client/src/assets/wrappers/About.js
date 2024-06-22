@@ -3,9 +3,10 @@ import styled from "styled-components";
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     .introduction {
-        margin: auto;
+        margin-bottom: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -15,14 +16,20 @@ const Wrapper = styled.div`
     .special1 {
         justify-content: center;
         font-family: "Lato Bold";
+        font-size: 24px;
         color: var(--foundation-light);
     }
     .special2 {
         font-family: "Lato Medium";
+        font-size: 16px;
         color: var(--foundation-dark-active);
     }
 
     .about-section {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .profile-img {
@@ -33,13 +40,17 @@ const Wrapper = styled.div`
     .description {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
     .short-description {
+        padding: 0px 20px;
+        margin-bottom: 24px;
+        font-size: 16px;
         font-family: "Lato Medium";
-        text-align: justify;
+        text-align: center;
         color: var(--foundation-dark-hover);
-        line-height: 1.9;
+        line-height: 160%;
     }
 
     .special-download-button {
@@ -57,12 +68,22 @@ const Wrapper = styled.div`
     }
 
     .tech-stack {
+        box-sizing: border-box;
+        padding: 20px 0px;
+        border-radius: 20px;
+        width: 75%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 40px;
+        background-color: #1e1e1e;
         .tech-container {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 24px;
             img {
+                width: 50px;
+                height: 50px;
                 object-fit: contain;
             }
             span {
@@ -74,41 +95,10 @@ const Wrapper = styled.div`
 
     /* Responsiveness */
     @media only screen and (max-width: 600px) {
-        .introduction {
-            margin-bottom: 40px;
-        }
-
-        .special1 {
-            font-size: 24px;
-        }
-        .special2 {
-            font-size: 16px;
-        }
-
-        .description {
-            align-items: center;
-        }
-
-        .short-description {
-            text-align: center;
-        }
-
-        .about-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 70px;
-        }
-
         .profile-img {
             margin-bottom: 20px;
             width: 100%;
-            height: 565px;
-        }
-
-        .short-description {
-            font-size: 16px;
-            margin-bottom: 24px;
+            height: 351px;
         }
 
         .special-download-button {
@@ -117,19 +107,6 @@ const Wrapper = styled.div`
             margin: auto;
             width: 186px;
             height: 40px;
-        }
-
-        .tech-stack {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            row-gap: 40px;
-            column-gap: 10px;
-            .tech-container {
-                img {
-                    width: 90px;
-                    height: 90px;
-                }
-            }
         }
     }
 
