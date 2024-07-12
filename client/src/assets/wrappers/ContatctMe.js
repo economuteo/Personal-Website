@@ -3,29 +3,41 @@ import styled from "styled-components";
 const Wrapper = styled.section`
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     .special1 {
         text-align: center;
         margin-bottom: 18px;
+        font-size: 24px;
         font-family: "Lato Bold";
         color: var(--foundation-light);
     }
     .special2 {
+        margin-bottom: 40px;
         text-align: center;
         font-family: "Lato Medium";
         color: var(--foundation-dark-active);
     }
 
     form {
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        max-width: 600px;
+
         input,
         select {
             height: 54px;
+            width: 100%;
         }
 
         textarea {
             padding: 20px;
             height: 162px;
             resize: none;
+            width: 100%;
         }
 
         input,
@@ -44,13 +56,14 @@ const Wrapper = styled.section`
         select:focus,
         textarea:focus {
             outline: none;
-            border: 3px solid var(--fuondation-dark-hover);
+            border: 3px solid var(--foundation-dark-hover);
             box-shadow: 0px 0px 10px var(--foundation-dark-hover);
         }
     }
 
     .sendButton {
         box-sizing: border-box;
+        padding: 8px 24px;
         margin: auto;
         border: 3px solid var(--foundation-dark-hover);
         border-radius: 10px;
@@ -66,45 +79,12 @@ const Wrapper = styled.section`
     }
 
     /* Responsiveness */
-    @media only screen and (max-width: 600px) {
-        .special1 {
-            font-size: 24px;
-        }
-        .special2 {
-            font-size: 16px;
-            margin-bottom: 40px;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-bottom: 20px;
-
-            input,
-            select {
-                width: 100%;
-                max-width: 382px;
-            }
-            textarea {
-                width: 100%;
-                max-width: 382px;
-            }
-        }
-
-        .sendButton {
-            padding: 8px 24px;
-        }
-    }
 
     /* Tablet */
     @media only screen and (min-width: 768px) {
     }
 
     @media only screen and (min-width: 1328px) {
-        .special1 {
-            font-size: 40px;
-        }
         .special2 {
             font-size: 20px;
             margin-bottom: 50px;

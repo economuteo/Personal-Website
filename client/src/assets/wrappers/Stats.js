@@ -8,6 +8,7 @@ const Wrapper = styled.div`
     padding: 8px;
     border-radius: 20px;
     display: inline-flex;
+    flex-direction: column;
     gap: var(--gap-size);
     justify-content: space-between;
     background-color: rgba(255, 255, 255, 0.04);
@@ -25,7 +26,6 @@ const Wrapper = styled.div`
         font-family: "Lato Regular";
         background: var(--special-color);
         p {
-            font-size: 0.75rem;
             color: var(--foundation-normal-hover);
         }
     }
@@ -33,7 +33,7 @@ const Wrapper = styled.div`
     .special {
         font-family: "Lato Bold";
         color: var(--foundation-orange-normal);
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 
     p {
@@ -52,6 +52,7 @@ const Wrapper = styled.div`
     }
 
     @media only screen and (min-width: 768px) {
+        flex-direction: row;
         .column {
             padding: 20px;
         }
@@ -64,8 +65,6 @@ const Wrapper = styled.div`
     }
 
     /* Tablets */
-    /* @media only screen and (min-width: 768px) {
-    } */
 
     @media only screen and (min-width: 1328px) {
         height: 125px;

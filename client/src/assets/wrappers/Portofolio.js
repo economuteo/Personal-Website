@@ -10,13 +10,15 @@ const Wrapper = styled.section`
     }
 
     .buttons-container {
+        margin-bottom: 40px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin: auto;
+        gap: 14px;
     }
 
     .special-button {
+        padding: 10px 20px;
         border-radius: 10px;
         font-family: "Lato Regular";
         color: var(--primary-50);
@@ -28,16 +30,6 @@ const Wrapper = styled.section`
     }
 
     /* Responsiveness */
-    @media only screen and (max-width: 600px) {
-        .buttons-container {
-            margin-bottom: 34px;
-            gap: 14px;
-        }
-
-        .special-button {
-            padding: 10px 20px;
-        }
-    }
 
     /* Tablet */
     @media only screen and (min-width: 768px) {

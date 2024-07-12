@@ -1,7 +1,13 @@
+import React from "react";
 import Wrapper from "../assets/wrappers/Sidebar";
 import { NavLink } from "react-router-dom";
 
 const Sidebar = ({ sidebar, sidebarAnimation, toggleSidebar }) => {
+    const handleLinkClick = () => {
+        window.scrollTo(0, 0); // Scroll to top
+        toggleSidebar(); // Close sidebar
+    };
+
     return (
         <Wrapper
             sidebar={sidebar}
@@ -12,7 +18,7 @@ const Sidebar = ({ sidebar, sidebarAnimation, toggleSidebar }) => {
                     <NavLink
                         to="/"
                         className={(navData) => (navData.isActive ? "active" : null)}
-                        onClick={toggleSidebar}>
+                        onClick={handleLinkClick}>
                         Home
                     </NavLink>
                 </div>
@@ -20,7 +26,7 @@ const Sidebar = ({ sidebar, sidebarAnimation, toggleSidebar }) => {
                     <NavLink
                         to="/about"
                         className={(navData) => (navData.isActive ? "active" : null)}
-                        onClick={toggleSidebar}>
+                        onClick={handleLinkClick}>
                         About me
                     </NavLink>
                 </div>
@@ -28,7 +34,7 @@ const Sidebar = ({ sidebar, sidebarAnimation, toggleSidebar }) => {
                     <NavLink
                         to="/services"
                         className={(navData) => (navData.isActive ? "active" : null)}
-                        onClick={toggleSidebar}>
+                        onClick={handleLinkClick}>
                         Services
                     </NavLink>
                 </div>
@@ -36,7 +42,7 @@ const Sidebar = ({ sidebar, sidebarAnimation, toggleSidebar }) => {
                     <NavLink
                         to="/portofolio"
                         className={(navData) => (navData.isActive ? "active" : null)}
-                        onClick={toggleSidebar}>
+                        onClick={handleLinkClick}>
                         Portofolio
                     </NavLink>
                 </div>
@@ -44,7 +50,7 @@ const Sidebar = ({ sidebar, sidebarAnimation, toggleSidebar }) => {
                     <NavLink
                         to="/contact"
                         className={(navData) => (navData.isActive ? "active" : null)}
-                        onClick={toggleSidebar}>
+                        onClick={handleLinkClick}>
                         Contact me
                     </NavLink>
                 </div>

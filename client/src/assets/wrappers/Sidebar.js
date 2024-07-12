@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 const Wrapper = styled.section`
     width: 100vw;
-    height: calc(100vh - 71px);
+    height: calc(100vh - 36px);
     box-sizing: border-box;
     position: absolute;
-    top: 71px;
+    top: 36px;
     left: 0px;
     z-index: 100;
     background: var(--background-color);

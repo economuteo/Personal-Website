@@ -57,6 +57,7 @@ const Wrapper = styled.div`
         overflow: hidden;
         box-sizing: border-box;
         padding: 12px 30px;
+        margin-top: 30px;
         border-radius: 10px;
         display: inline-flex;
         align-items: center;
@@ -93,18 +94,17 @@ const Wrapper = styled.div`
         }
     }
 
+    .profile-img {
+        width: 100%;
+        margin-bottom: 20px;
+        height: 351px;
+    }
+
     /* Responsiveness */
     @media only screen and (max-width: 600px) {
-        .profile-img {
-            margin-bottom: 20px;
-            width: 100%;
-            height: 351px;
-        }
-
         .special-download-button {
             font-size: 20px;
             font-size: 14px;
-            margin: auto;
             width: 186px;
             height: 40px;
         }
@@ -112,11 +112,19 @@ const Wrapper = styled.div`
 
     /* Tablet */
     @media only screen and (min-width: 768px) {
+        .profile-img {
+            height: 700px;
+        }
     }
 
     @media only screen and (min-width: 1328px) {
         .introduction {
             margin-bottom: 40px;
+        }
+
+        .about-section {
+            display: flex;
+            flex-direction: row;
         }
 
         .special1 {
@@ -131,21 +139,22 @@ const Wrapper = styled.div`
         }
 
         .about-section {
-            margin-bottom: 100px;
+            margin-top: 40px;
+            margin-bottom: 60px;
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: start;
             gap: 100px;
         }
 
         .profile-img {
             width: 566px;
-            height: 808px;
+            height: 700px;
         }
 
         .short-description {
-            margin-bottom: 40px;
-            font-size: 20px;
+            text-align: right;
+            font-size: 1.85rem;
         }
 
         .special-download-button {
@@ -157,6 +166,7 @@ const Wrapper = styled.div`
         .tech-stack {
             display: flex;
             justify-content: space-between;
+            padding: 20px;
             .tech-container {
                 img {
                     width: 130px;
