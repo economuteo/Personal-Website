@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 
         .the-line {
             height: 3px;
-            background-color: #333;
+            background-color: white;
             transition: all 0.3s ease;
         }
 
@@ -22,7 +22,7 @@ const Wrapper = styled.div`
             width: 100%;
             position: absolute;
             content: "";
-            background-color: #333;
+            background-color: white;
             transition: all 0.3s ease;
         }
 
