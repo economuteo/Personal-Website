@@ -14,11 +14,11 @@ import "swiper/css/pagination";
 import { FreeMode, Pagination } from "swiper/modules";
 
 const Apps = ({ apps }) => {
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+    const [isSwipper, setIsSwipper] = useState(window.innerWidth <= 1328);
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768);
+            setIsSwipper(window.innerWidth <= 1328);
         };
 
         window.addEventListener("resize", handleResize);
@@ -30,7 +30,7 @@ const Apps = ({ apps }) => {
 
     return (
         <Wrapper>
-            {isMobile ? (
+            {isSwipper ? (
                 <Swiper
                     slidesPerView={1}
                     spaceBetween={18}
