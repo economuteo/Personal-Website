@@ -14,11 +14,11 @@ import "swiper/css/pagination";
 import { FreeMode, Pagination } from "swiper/modules";
 
 const Apps = ({ apps }) => {
-    const [isSwipper, setIsSwipper] = useState(window.innerWidth <= 1328);
+    const [isSwipper, setIsSwipper] = useState(window.innerWidth < 1328);
 
     useEffect(() => {
         const handleResize = () => {
-            setIsSwipper(window.innerWidth <= 1328);
+            setIsSwipper(window.innerWidth < 1328);
         };
 
         window.addEventListener("resize", handleResize);
