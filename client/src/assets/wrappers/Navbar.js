@@ -10,6 +10,7 @@ const Wrapper = styled.nav`
 
     &.scrolled {
         padding: 10px 20px;
+        margin-top: 0px;
         background-color: black;
     }
 
