@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const Wrapper = styled.nav`
+    box-sizing: border-box;
     position: sticky;
     top: 0px;
     z-index: 1000;
@@ -9,6 +10,7 @@ const Wrapper = styled.nav`
     transition: background-color 0.3s ease;
 
     &.scrolled {
+        width: 100% !important;
         padding: 10px 20px;
         margin-top: 0px;
         background-color: black;
