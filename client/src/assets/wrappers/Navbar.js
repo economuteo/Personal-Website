@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
 const Wrapper = styled.nav`
+    width: 100% !important;
     box-sizing: border-box;
+    margin-top: 10px;
     position: sticky;
     top: 0px;
     z-index: 1000;
-    margin-top: 10px;
     background-color: var(--initial-background-color);
     transition: background-color 0.3s ease;
 
     &.scrolled {
-        width: 100% !important;
         padding: 10px 20px;
         margin-top: 0px;
         background-color: black;
