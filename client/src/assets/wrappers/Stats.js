@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
     --gap-size: 16.5px;
-    width: 100%;
-    max-width: 500px;
-    box-sizing: border-box;
     padding: 8px;
+    width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
     border-radius: 20px;
     display: inline-flex;
     flex-direction: column;
@@ -67,9 +67,9 @@ const Wrapper = styled.div`
     /* Tablets */
 
     @media only screen and (min-width: 1328px) {
-        height: 125px;
-        max-width: 537px;
         padding: 16px;
+        max-width: 350px;
+        height: 125px;
 
         .special {
             font-size: 1.25rem;

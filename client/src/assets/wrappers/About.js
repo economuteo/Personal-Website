@@ -21,7 +21,7 @@ const Wrapper = styled.div`
     }
     .special2 {
         font-family: "Lato Medium";
-        font-size: 16px;
+        font-size: 24px;
         color: var(--foundation-dark-active);
     }
 
@@ -34,7 +34,7 @@ const Wrapper = styled.div`
 
     .profile-img {
         border-radius: 20px;
-        object-fit: cover;
+        object-fit: contain;
     }
 
     .description {
@@ -44,9 +44,9 @@ const Wrapper = styled.div`
     }
 
     .short-description {
+        margin-top: 10px;
         padding: 0px 20px;
         margin-bottom: 24px;
-        font-size: 16px;
         font-family: "Lato Medium";
         text-align: center;
         color: var(--foundation-dark-hover);
@@ -57,7 +57,7 @@ const Wrapper = styled.div`
         overflow: hidden;
         box-sizing: border-box;
         padding: 12px 30px;
-        margin-top: 30px;
+        margin-top: 50px;
         border-radius: 10px;
         display: inline-flex;
         align-items: center;
@@ -72,7 +72,7 @@ const Wrapper = styled.div`
         box-sizing: border-box;
         padding: 20px 0px;
         border-radius: 20px;
-        width: 75%;
+        width: 85%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         row-gap: 40px;
@@ -110,11 +110,8 @@ const Wrapper = styled.div`
         }
     }
 
-    /* Tablet */
     @media only screen and (min-width: 768px) {
-        .profile-img {
-            height: 700px;
-        }
+        font-size: 1.25em;
     }
 
     @media only screen and (min-width: 1328px) {
@@ -130,9 +127,6 @@ const Wrapper = styled.div`
         .special1 {
             font-size: 40px;
         }
-        .special2 {
-            font-size: 20px;
-        }
 
         .description {
             align-items: start;
@@ -140,7 +134,7 @@ const Wrapper = styled.div`
 
         .about-section {
             margin-top: 40px;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
             display: flex;
             justify-content: space-between;
             align-items: start;
@@ -153,7 +147,7 @@ const Wrapper = styled.div`
         }
 
         .short-description {
-            text-align: right;
+            text-align: center;
             font-size: 1.85rem;
         }
 

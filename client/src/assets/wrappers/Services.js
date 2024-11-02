@@ -150,7 +150,7 @@ const Wrapper = styled.section`
 
     /*Desktops*/
     @media only screen and (min-width: 1328px) {
-        gap: 80px;
+        gap: 35px;
 
         .introduction {
             gap: 18px;

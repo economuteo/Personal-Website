@@ -1,5 +1,4 @@
 import Wrapper from "../assets/wrappers/About";
-import ProfilePhoto from "../assets/images/profilePhoto.jpg";
 import Javascript from "../assets/images/about/javascript.png";
 import MongoDB from "../assets/images/about/mongodb_logo.png";
 import Express from "../assets/images/about/express.png";
@@ -17,7 +16,6 @@ const AboutMe = () => {
                 <p className="special2"> Full Stack Developer </p>
             </div>
             <div className="about-section">
-                <img className="profile-img" src={ProfilePhoto} alt="Me" />
                 <div className="description">
                     <p className="short-description">
                         My journey in web development is driven by a profound passion to create and
