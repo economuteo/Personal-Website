@@ -4,8 +4,8 @@ const Stats = () => {
     return (
         <Wrapper>
             <span className="column">
-                <span className="special">1</span>
-                <p>Experience</p>
+                <span className="special">2</span>
+                <p>Experiences</p>
             </span>
             <span className="column">
                 <span className="special">4</span>
